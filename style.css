@@ -1,0 +1,346 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #eef4ff; /* Light blue background similar to the image */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  padding: 20px; /* Add some padding around the container */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.left-panel {
+  background-color: transparent; /* No background color, letting body background show */
+  width: 40%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right to visually match the image */
+  padding-right: 80px; /* Adjust padding to move elements closer to the center */
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.logo img {
+  max-width: 250px; /* Slightly larger logo */
+  height: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff; /* White background for search bar */
+  border-radius: 25px;
+  padding: 8px 15px;
+  width: 90%; /* Adjust width for search bar */
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  padding: 8px;
+  width: 100%;
+  outline: none;
+}
+
+.search-bar i {
+  color: #777;
+  margin-left: 5px; /* Space between text and icon */
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 90%; /* Adjust width for tags */
+}
+
+.tag-btn {
+  background-color: #fff;
+  color: #555; /* Darker text for tags */
+  border: none; /* No border for tags */
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.tag-btn:hover {
+  background-color: #e0e0e0; /* Slight hover effect */
+  color: #333;
+}
+
+.right-panel {
+  background-color: transparent;
+  width: 60%;
+  display: flex;
+  justify-content: flex-start; /* Align form to the left within its panel */
+  align-items: center;
+  padding: 40px;
+  padding-left: 80px; /* Adjust padding to move elements closer to the center */
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px; /* Adjust icon position */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px 12px 45px; /* Adjust padding for icon */
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1em;
+}
+
+.input-group input:focus {
+  border-color: #999; /* Neutral focus color */
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+  color: #6a1aef; /* Purple color from image */
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  background-image: linear-gradient(to right, #a74cf2, #f7797e); /* Gradient from images */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1em;
+  transition: opacity 0.3s;
+  margin-bottom: 15px;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.separator {
+  text-align: center;
+  color: #aaa; /* Lighter color for separator */
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #eee; /* Lighter line */
+}
+
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
+
+.social-login {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-login button {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd; /* Lighter border */
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s;
+  font-size: 0.9em; /* Smaller font size */
+}
+
+.social-login button:hover {
+  background-color: #f8f8f8; /* Subtle hover effect */
+}
+
+.social-login .fab {
+  font-size: 1.2em;
+}
+
+.google-btn {
+  color: #555; /* Default text color */
+}
+
+.facebook-btn {
+  color: #555; /* Default text color */
+}
+
+.create-account-btn {
+  background-image: linear-gradient(to right, #c471f5, #fa71cd); /* Different gradient for create account button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1em;
+  transition: opacity 0.3s;
+}
+
+.create-account-btn:hover {
+  opacity: 0.9;
+}
+
+/* Signup Form Specific Styles */
+.signup-form .input-group.phone-input {
+  display: flex;
+  align-items: center;
+}
+
+.signup-form .input-group.phone-input div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  padding: 12px 10px;
+  background-color: #f0f0f0; /* Light grey background for prefix */
+  font-size: 1em;
+  color: #555;
+}
+
+.signup-form .input-group.phone-input .flag-icon {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.signup-form .input-group.phone-input input {
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  padding-left: 15px; /* Adjust padding for phone number input */
+}
+
+.signup-form .terms-info {
+  color: #555;
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.signup-form .terms-info a {
+  color: #6a1aef; /* Purple link color */
+  text-decoration: none;
+}
+
+.signup-form .terms-info a:hover {
+  text-decoration: underline;
+}
+
+.signup-form .already-account {
+  text-align: center;
+  margin-top: 15px; /* Space above this link */
+}
+
+.login-toggle {
+  background: none;
+  color: #6a1aef; /* Purple link color */
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95em;
+  display: inline-block; /* Make it inline block to align better */
+}
+
+.login-toggle:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #eef4ff; /* Same background as body */
+  padding: 15px 40px; /* Adjust padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+  color: #555; /* Darker text for better readability */
+  border-top: 1px solid #e0e0e0; /* Subtle top border */
+}
+
+.language-options {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between elements */
+}
+
+.language-options span {
+  color: #555;
+}
+
+.language-options a {
+  color: #6a1aef; /* Purple link color from image */
+  text-decoration: none;
+}
+
+.language-options a:hover {
+  text-decoration:none;
+}
+
+.footer-links a {
+  color: #555; /* Default text color for Privacy and Terms */
+  text-decoration: none;
+  margin-left: 20px; /* Space between links */
+}
+
+.footer-links a:hover {
+  text-decoration:none;
+}
